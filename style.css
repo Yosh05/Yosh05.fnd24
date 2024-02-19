@@ -1,0 +1,313 @@
+@charset "utf-8";
+
+h1{
+    font-family: "Comic Sans MS", YuMincho, serif;
+}
+
+h2{
+    position: absolute;
+    top: 60px;
+    left: 980px;
+    width: 500px;
+    height:20px;
+}
+
+img {
+    width: 240px;
+    height:130px;
+    border-style: none;
+    background-color: #000;
+  }
+
+body {
+  font-family: "Comic Sans MS", YuMincho, serif;
+}
+
+#omikujiButton {
+    position:absolute;/* ボタン位置を絶対値にする*/
+    width:10%;/* ボタンの幅を親要素に対して１０％にする */
+    top: 70px;/* ボタンの上端を親要素から70px下に配置*/
+    font-family: "Arial", sans-serif; /* フォントの指定 */
+    background-color: #eef198; /* ボタンの背景色を変更 */
+    color: rgb(0, 0, 0);   /* テキストの色を変更 */
+	opacity: 1; /* 透明度を不透明にする */
+	border:hsl(281, 100%, 75%);/*ボタンの境界線　*/
+	border: 4px outset ;       /* このクラスが指定されたボタンの文字色を変更 */
+    
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    box-shadow:
+        inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+#kekka{
+    position:relative;/* ボタン位置を絶対値にする*/
+    width:20%;/* ボタンの幅を親要素に対して１０％にする */
+    height:50px;
+    left: 82%;
+    top: -35px;
+    font-family: "Arial", sans-serif; /* フォントの指定 */
+    color: blueviolet;
+    font-weight: bold; /* フォントを太くする　または　700とか */
+    /* background-color:hsl(281, 100%, 75%); hsl表示とはH（Hue）：色相、S:彩度（Saturation)、L（Linghtness):輝度 */
+
+}
+
+#comment{
+    position:relative;/* ボタン位置を絶対値にする*/
+    width:20%;/* ボタンの幅を親要素に対して１０％にする */
+    height:50px;
+    left: 82%;
+    top: -35px;
+    font-family: "Arial", sans-serif; /* フォントの指定 */
+    color: blueviolet;
+    font-weight: bold; /* フォントを太くする　または　700とか */
+    /* background-color:hsl(281, 100%, 75%); hsl表示とはH（Hue）：色相、S:彩度（Saturation)、L（Linghtness):輝度 */
+
+}
+
+#resutlImage {
+    position:relative;/* ボタン位置を絶対値にする*/
+    width: 10%;
+    height: 10%; /* 画面の高さいっぱいに広げる */
+    object-fit: cover; /* アスペクト比を保持したまま、余白をなくして画像を表示 */
+    left: 89%;
+    top: -200px;
+}
+
+#mainvisu_id {
+    position:absolute;
+    width: 40%;
+    height: 50%; 
+    left: 30%;
+    top: 30%;
+
+    text-align: center; 
+    margin-bottom: 30px;
+  }
+
+  #park_button{
+    position:relative;
+    width: 20%;
+    height: 10%; 
+    left: 70%;
+    top: 10%;
+    text-align: center; 
+    margin-bottom: 30px;
+    background-color:gold; /* Darker green on hover */
+    margin:1px;
+    border-radius: 10px;
+    color: brown;
+  }
+
+  #park_button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+   #returnButton03{
+    background-color: rgb(32, 56, 100);
+    color: #fff;
+    padding: 3px 10px;
+    border: 2px solid #ca94f9;
+    border-radius: 10px;
+    cursor: pointer;
+   }
+
+/* バナーエリア */
+#banner ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#banner ul li {
+  margin-bottom: 20px;
+}
+#banner {
+  width: 60px;
+  float: right;
+  margin-right: -190px;
+  margin-bottom: -70;
+}
+
+/* ======================= ヘッダー */
+header {
+  border-top: 10px solid #1dff87; /* 上ボーダーに10px、実線、#1dff87を指定 */
+}
+header h1 {
+  margin: 50px 0 30px 0; /* 上50px、右0px、下30px、左0px のマージンを指定 */
+  text-align: center; /* 内容を中央揃えに */
+}
+header nav ul { /* リスト */
+  width: 940px; /* 幅を940pxに指定 */
+  padding-left: 0; /* デフォルトスタイルをリセット */
+  margin: 0 auto 30px auto; /* 上 0px、右 auto、下 30px、左 auto */
+  list-style-type: none; /* リストマーカーを消す */
+}
+header nav ul li { /* リスト項目 */
+  width: 155px; /* 幅を155pxに指定 */
+  margin-right: 2px; /* リスト項目と右隣りのリスト項目の間を2px空ける */
+  float: left; /* 左フロート */
+  text-align: center; /* テキストを中央揃え */
+}
+header nav ul li:last-child {/* 最後のリスト項目 */
+  margin-right: 0; /* 右マージン0 */
+}
+.clearfix:after { /* clearfix */
+  content:"";
+  display: block;
+  clear: both;
+}
+header nav ul li a {
+  text-decoration: none; /* 下線を消す */
+  background-color: #17ff06; /* 背景色 */
+  color: #fff; 
+  padding: 10px 0; /* パディング 上下10px 左右0px */
+  display: block; /* ブロックレベル表示 */
+}
+header nav ul li a:hover, /* カーソルを乗せた時 */
+header nav ul li a:active, /* クリックした時 */
+header nav ul li.current a { /* 現在ページの時 */
+  background-color: #b3ff00;
+}
+/* ======================= フッター */
+footer {
+  background-color: #b3ff00;
+  color: #3a2424;
+  padding: 30px 0;
+  text-align: center; /* 中央揃え */
+}
+footer ul {
+  padding: 0;
+  margin-bottom: 30px;
+}
+footer ul {
+  margin-bottom: 30px;
+  padding: 0;
+}
+footer ul li {
+  display: inline; /* インライン表示にして横並びに配置 */
+  margin: 0 10px;
+}
+footer ul li a {
+  color: #3a2424;
+}
+footer ul li a:link,
+footer ul li a:visited {
+  text-decoration: none; /* 下線を消す */
+}
+footer ul li a:hover,
+footer ul li a:active {
+  text-decoration: underline; /* 下線を表示する */
+}
+/* ======================= メイン */
+main {
+  width: 540px;
+  margin: 0 auto; /* 中央に配置 */
+}
+
+/* ======================= ABOUT*/
+
+table {
+  border-collapse: collapse;
+  margin: 90 auto 0px; /* 左に配置　90*/
+  border: 1px solid hsl(271, 27%, 21%);
+}
+table th, table td {
+  padding: 10px 20px;
+}
+table th {
+  border-right: 1px solid hsl(271, 27%, 21%);
+}
+table tr:nth-child(odd) { /* 奇数行毎に */
+  background-color: hsl(271, 88%, 84%);
+}
+/* ====================== スマートフォン */
+@media screen and (max-width: 767px){
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  header, main, #main_content, #banner, header nav ul {
+    width: 100%;
+  }
+  header nav ul li {
+    margin-right: 0;
+    width: 50%; /* 幅を50%に指定 */
+    box-sizing: border-box; /* ボーダーの幅を50%に含める */
+    border:1px solid #fff;
+  }
+  main {
+    padding: 0 15px;  /* 上下0px、左右15px */
+    box-sizing: border-box; /* パディングを幅に含める */
+  }
+  #banner {
+    float: none;
+    text-align: center;
+  }
+  footer ul {
+    display: none; /* 非表示に */
+  }
+
+  /* === ABOUT === */
+  main h2:before,
+  main h2:after {
+    content: none;
+  }
+  .box {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+  .box img {
+    margin: 0 auto;
+  }
+  p.photo {
+    margin-top: 30px;
+  }
+  /* === MENU === */
+  #menu .image {
+    width: 100%;
+    margin-bottom: 20px;
+    float: none;
+    text-align: center;
+  }
+  #menu table {
+    width: 100%;
+    float: none;
+  }
+  /* === CONTACT === */
+  #contact form {
+    width: 100%;
+  }
+  #contact dl dt {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    float: none;
+    background-color: #E1CFBA;
+    padding: 5px;
+  }
+  #contact dl dd {
+    width: 100%;
+    box-sizing: border-box;
+    float: none;
+    margin-bottom: 20px;
+  }
+  #contact input[type="text"],
+  #contact input[type="email"],
+  #contact textarea {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  /* === ACCESS === */
+  #access iframe {
+    width: 100%;
+  }
+}
