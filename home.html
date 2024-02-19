@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DIG 最終課題</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header id="top">
+        <div id="current-time"></div>
+        <h1>Home Page </h1>
+        <h2>created by Yosh</h2>
+       
+        <div class="top-maintes">
+        <nav>
+            <ul>
+                <li class="current"><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="menu.html">NONE</a></li>
+                 <li><a href="coupon.html">NONE</a></li>
+                 <li><a href="access.html"> NONE</a></li>
+                 <li><a href="contact.html">NONE</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+    </header>
+    <div class="Omikuji_C">
+        <button id="omikujiButton" onclick="Omikuji();">おみくじ</button>
+        <p id="kekka"></p>
+        <p id="comment">    </p>
+        <img id="resutlImage" src="images/omikuji_picture.png" alt="おみくじの結果画像">
+    </div>
+
+     <!-- メインビジュアル -->
+     <main class="clearfix">
+        <div calss="mainvisu">
+        <img id="mainvisu_id" src="images/shiyakusho.png" alt="市役所の役割"></div>
+    <!-- バナー -->
+  <aside id="banner">
+    <ul>
+      <li><a href="yurukyara.html"><img src="images/yurukyara.png" alt="ゆるキャラブログ"></a></li>
+      <li><a href="https://www.toyota.co.jp/kodomoanzen/"><img src="images/kodomosafety.png" alt="交通安全"></a></li>
+    </ul>
+  </aside>
+  </main>
+  <script>
+    function updateTime() {
+        var now = new Date();
+        var hours = now.getHours().toString().padStart(2, '0');//tostring で文字列返す　２桁で返し、先頭には０をつける
+        var minutes = now.getMinutes().toString().padStart(2, '0');
+        var seconds = now.getSeconds().toString().padStart(2, '0');
+        var timeString = hours + ':' + minutes + ':' + seconds;
+        document.getElementById('current-time').innerText = 'Current Time: ' + timeString;
+    }
+    
+    setInterval(updateTime, 1000);//1秒ごとに返す
+</script>
+</body>
+</html>
