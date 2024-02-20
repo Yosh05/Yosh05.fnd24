@@ -97,27 +97,59 @@
     </footer>
 
     <script>
-   const imgElement01 = document.getElementById("image1");
-   const imgElement02 = document.getElementById("image2");
+//    const imgElement01 = document.getElementById("image1");
+//    const imgElement02 = document.getElementById("image2");
+   let imgElement ;
    let rotationDeg01 = 0;
    let rotationDeg02 = 0;
    let translationX01 = 0;
    let translationX02 = 0;
    let translationZ01 = 0;
    let translationZ02 = 0;
+   let targetVariable;
 
-    document.getElementById("button1").addEventListener("click", rotateImage1);
-    document.getElementById("button2").addEventListener("click", rotateImage2);
+// ボタンに対するクリックイベントを検知
+document.getElementById('button1').addEventListener('click', function() {
+    imgElement = document.getElementById("image1");
+    console.log(imgElement);
+});
+
+document.getElementById('button2').addEventListener('click', function() {
+    imgElement = document.getElementById("image2");
+});
+
+
+    document.getElementById("button1").addEventListener("click", select_led_pattern);
+    document.getElementById("button2").addEventListener("click", select_led_pattern);
 
     function select_led_pattern() {
-        const selectedPattern = document.getElementById("select_pattern").value;
-        console.log(selectedPattern + "checkcheckcheck")
+    const selectedPattern = document.getElementById("select_pattern").value;
+    console.log(selectedPattern + " check check check");
+
+    // 選択されたパターンに応じて処理を行う
+    if (selectedPattern === "上に") {
+        moveUpImage();
+    } else if (selectedPattern === "下に") {
+        moveDownImage();
+    } else if (selectedPattern === "左に") {
+        moveLeftImage() ;
+    } else if (selectedPattern === "右に") {
+        moveRightImage();
+    } else if (selectedPattern === "左右に") {
+        rotateImage2()
+    } else if (selectedPattern === "回転") {
+        rotateImage1();
+    } else if (selectedPattern === "その他1") {
+        // その他1の処理を追加
+    } else if (selectedPattern === "その他2") {
+        // その他2の処理を追加
+    }
 }
 
     //90度回転
     function rotateImage1() {
         rotationDeg01 += 90;
-        imgElement01.style.transform = "rotate(" + rotationDeg01 + "deg)";
+        imgElement.style.transform = "rotate(" + rotationDeg01 + "deg)";
     }
     //30度左右に動く
     function rotateImage2() {
@@ -127,7 +159,30 @@
         }else{
             rotationDeg02 = rotationDeg02 * 1
         }
-        imgElement02.style.transform = "rotate(" + rotationDeg02 + "deg)";
+        imgElement.style.transform = "rotate(" + rotationDeg02 + "deg)";
+    }
+
+    // 上に30pxずつ動かす
+
+    function moveUpImage() {
+        translationZ01 -= 10;
+        imgElement.style.transform = "translateY(" + translationZ01 + "px)";
+    }
+    // 下に30pxずつ動かす
+    function moveDownImage() {
+        translationZ02 += 10;
+        imgElement.style.transform = "translateY(" + translationZ02 + "px)";
+    }
+
+        // 右に30pxずつ動かす
+    function moveRightImage() {
+        translationX01 += 30;
+        imgElement.style.transform = "translateX(" + translationX01 + "px)";
+    }
+    // 左に30pxずつ動かす
+    function moveLeftImage() {
+        translationX02 -= 30;
+        imgElement.style.transform = "translateX(" + translationX02 + "px)";
     }
 
     </script>
